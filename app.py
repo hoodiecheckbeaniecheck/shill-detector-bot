@@ -28,12 +28,12 @@ def do_bot_stuff():
                 # Check if we already replied to this comment
                 if comment_id not in previous_comment_ids:
                     # Search for phrase
-                    if body.find(' try and ') != -1:
+                    if body.find('!shill') != -1:
                         previous_comment_ids.append(comment_id)
 
                         try:
                             # Reply to the comment
-                            result.reply('try to* 😇')
+                            #result.reply('try to* 😇')
 
                             logging.info(f"Replied to post: {result.link_permalink}")
                         except praw.exceptions.RedditAPIException as api_exc:
